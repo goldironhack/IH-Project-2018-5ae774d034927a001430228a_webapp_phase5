@@ -1,15 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title></title>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="shortcut icon" href="Images/IconGPS.png">
     <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <h1>Hello World!</h1>
-        <button id="btn">Click me</button>
+    <link href="https://fonts.googleapis.com/css?family=Alef" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
+    <title>GPSFinderNY</title>
+  </head>
+  <h1>GPS Finder NY</h1>
+  <body>
+  <div class="row">
+    <div class="col-md-4">
     </div>
-    <script src="index.js"></script>
-</body>
+    <div class="col-md-7">
+      <button id="Bronx"> Bronx </button>
+      <button id="Brooklyn"> Brooklyn </button>
+      <button id="Manhattan"> Manhattan</button>
+      <button id="Queens"> Queens</button>
+      <button id="StatenIsland"> Staten Island</button>
+    </div>
+  </div>
+
+
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+          <div id="map"></div>
+      </div>
+    </div>
+
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+     <script src="index.js" ></script>
+     <script
+      src="https://www.jqueryscript.net/demo/jQuery-Plugin-To-Convert-HTML-Table-To-CSV-tabletoCSV/jquery.tabletoCSV.js"></script>
+
+      <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOiREIj7OlVojdyYlEHSZXG5M28Z5WN64&callback=initMap">
+      </script>
+      <script src="https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=Washington,DC&destinations=New+York+City,NY&key=AIzaSyAfhvU_sAn1XyQnI2ptuZG-xsVF2QVxhdY"></script>
+      
+  </body>
 </html>
